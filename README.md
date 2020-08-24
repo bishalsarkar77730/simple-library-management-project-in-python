@@ -8,6 +8,3 @@ in this you got ability to add new books in the library ....
 in this you got ability to know the author name of the books in library......
 
 # Thankyou
-
-# Author :- BISHAL SaRKAR
-# Date :- 24-08-2020

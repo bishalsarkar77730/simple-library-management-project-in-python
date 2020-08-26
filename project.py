@@ -1,4 +1,4 @@
-class library:
+class Library:
     def __init__(self, list_of_books, library_name):
         # creating a dictionary of all books keys
         self.lend_data = {}
@@ -26,7 +26,7 @@ class library:
     def return_book(self, book, author):
         if book in self.list_of_books:
             if self.lend_data[book] is not None:
-                self.lend_data.pop(book)
+                self.lend_data[book] = author
             else:
                 print("Sorry but This book is not Lend")
         else:
@@ -40,14 +40,13 @@ class library:
         self.list_of_books.remove(book_name)
         self.lend_data.pop(book_name)
 
-
 def main():
     # By deafault variables
-    list_books = ['Cookbook', 'Sherlock Holmes', 'Chacha_chaudhary', 'Rich Dad and Poor Dad']
+    list_books = ['hackers Cookbook', 'Sherlock Homes', 'one day i will be everything', 'Rich Dad and Poor Dad']
     library_name = 'Bishal'
     secret_key = 123456
 
-    bishal = library(list_books, library_name)
+    bishal = Library(list_books, library_name)
 
     print(
         f"Welecome To {bishal.library_name} library\nq for exit \nDisplay Book Using 'd' \nadd lend book using 'l'"
